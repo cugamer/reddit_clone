@@ -1,9 +1,9 @@
-<h1>All posts (I hope)</h1>
+<h1>All posts</h1>
 
 <p>This is the total number of posts: <%= @post.count %></p>
 
 <p><%= link_to "Create a new post", new_post_path  %></p>
 
 <% @post.reverse_each do |post| %>
-  <p>Post link: <%= link_to post.link, "http://" + post.link %></p>
+  <p>Post link: <%= link_to post.link, "http://" + post.link %> -- <%= post.created_at.strftime("%b %-d %Y, %l:%M %P (%Z)") %></p>
 <% end %>
