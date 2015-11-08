@@ -7,6 +7,8 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to root_url
     else
+      flash[:errors] = "something wrong"
+      flash[:successes] = "something good"
       render :new
     end
   end

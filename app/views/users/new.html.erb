@@ -1,5 +1,7 @@
 <h3>Create a New Account</h3>
 
+<%= render "layouts/information" %>
+
 <%= form_for :users, url: users_path do |f| %>
     <p>
         <%= f.label :name %>
