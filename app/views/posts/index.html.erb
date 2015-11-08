@@ -1,5 +1,9 @@
 <h1>All posts (I hope)</h1>
 
+<p>This is the total number of posts: <%= @post.count %></p>
+
+<p><%= link_to "Create a new post", new_post_path  %></p>
+
 <% @post.each do |post| %>
   <p>Post link: <%= post.link %></p>
 <% end %>

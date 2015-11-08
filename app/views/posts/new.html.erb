@@ -1,3 +1,5 @@
+<h1>Enter a new link here:</h1>
+
 <%= form_for :posts, url: posts_path do |f| %>
   <p>
     <%= f.label :link %>
@@ -7,3 +9,5 @@
   </p>
 
 <% end %>
+
+<p><%= link_to "Back to the main page", posts_path  %></p>
