@@ -5,5 +5,8 @@
 <p><%= link_to "Create a new post", new_post_path  %></p>
 
 <% @post.reverse_each do |post| %>
-  <p>Post link: <%= link_to post.descriptive_text, "http://" + post.link %> -- <%= post.created_at.strftime("%b %-d %Y, %l:%M %P (%Z)") %></p>
+  <p><%= post.rating  %>  <img src='/assets/arrow_up.png' />
+      <img src='/assets/arrow_down.png' />
+      <%= link_to post.descriptive_text, "http://" + post.link %> -- 
+      <%= post.created_at.strftime("%b %-d %Y, %l:%M %P (%Z)") %></p>
 <% end %>
