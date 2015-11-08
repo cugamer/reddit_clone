@@ -7,12 +7,12 @@ class PostsController < ApplicationController
   end
   
   def create
-    # render plain: params[:posts].inspect
-    # p "-------------------params ----------------------"
-    # p params
-    @post = Post.new(post_params)
-    @post.save
-    redirect_to root_url
+    @post = Post.create(post_params)
+    if @post
+      redirect_to root_url
+    else
+      render new_url
+    end
   end
   
   private
