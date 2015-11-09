@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def new
+    p "-------------------new called----------------------"
     @user = User.new
   end
   
@@ -8,7 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to root_url
     else
-      render 'new'
+      redirect_to new_user_path
     end
   end
   

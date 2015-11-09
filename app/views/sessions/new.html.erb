@@ -1,2 +1,21 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<!-- View for the Log in form.  -->
+
+<h3>Log in</h3>
+
+
+<%= form_for :session, url: login_path do |f| %>
+  <% flash.each do |message_type, message| %>
+    <div><%= message %></div>
+  <% end %>
+  
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit "Log in" %>
+
+<% end %>
+
+<p>New user? <%= link_to "Sign up here.", new_user_path  %></p>
