@@ -6,10 +6,12 @@ class PostsController < ApplicationController
   end
     
   def new
+    @user_id = current_user.id
   end
   
   def create
-    @post = Post.new(post_params)
+    user = User.find_by(id: current_user.id)
+    @post = user.posts.build(post_params)
     if @post.save
       redirect_to root_url
     else
