@@ -2,3 +2,11 @@
 <%= @user.email %>
 
 <%= render 'shared/new_post_link' %>
+
+<h3>Your posts</h3>
+
+<% @user.posts.reverse_each do |post| %>
+  <p>
+    <%= link_to post.descriptive_text,"http://" + post.link, :target => "_blank" %>
+  </p>
+<% end %>
