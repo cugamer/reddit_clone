@@ -1,6 +1,7 @@
 <h1>Welcome to RedditClone</h1>
 
 <div>
+  <%= link_to "Home page", root_path %>
   <% if logged_in? %>
     <%= link_to "Log out", logout_path, method: :delete %>
     <%= link_to "Profile", current_user %>

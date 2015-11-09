@@ -1,0 +1,5 @@
+<% if logged_in? %>
+  <p><%= link_to "Create a new post", new_post_path  %></p>
+<% else %>
+  <p><%= link_to "Log in to submit a new post", login_path %></p>
+<% end %>
