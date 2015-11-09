@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'comment/show'
+
   root          'posts#index'
   
   get           'login'       => 'sessions#new'
