@@ -6,7 +6,6 @@ class PostsController < ApplicationController
   end
     
   def new
-    @user_id = current_user.id
   end
   
   def create
