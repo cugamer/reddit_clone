@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   def new
-    p "-------------------new called----------------------"
     @user = User.new
   end
   
