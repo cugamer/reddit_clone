@@ -3,9 +3,8 @@ class CommentController < ApplicationController
   end
   
   def create
-    comment = Comment.new(comment_params)
-    p "------------------------#{comment_params}------------------------------"
-    p comment_params[:id]
+    user = User.find_by(id: current_user.id)
+    comment = user.comments.new(comment_params)
     if comment.save
       flash[:success] = "Comment posted"
     else
