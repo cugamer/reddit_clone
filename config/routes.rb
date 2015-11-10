@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get 'comment/show'
-
+  post 'comment/create'
   root          'posts#index'
   
   get           'login'       => 'sessions#new'
