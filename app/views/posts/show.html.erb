@@ -3,8 +3,9 @@
 <h3><%= link_to @post.descriptive_text, "http://" + @post.link %></h3>
 
 <%= form_for :comments, url: comment_create_path do |f| %>
-  <%= f.label :comment_body %>
-  <%= f.text_area :comment_body %>
+  <%= f.hidden_field :post_id, :value => @post.id %>
+  <%= f.label :comment_text %>
+  <%= f.text_area :comment_text %>
   
   <%= f.submit "Post comment" %>
 <% end %>
