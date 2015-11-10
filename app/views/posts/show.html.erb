@@ -9,3 +9,11 @@
   
   <%= f.submit "Post comment" %>
 <% end %>
+
+<% @post.comments.each do |comment| %>
+  <div>
+    <%= comment.comment_text %>  --  <%= comment.created_at.strftime("%b %-d %Y, %l:%M %P (%Z)") %>
+    <br />
+    <%= @user_email %>
+  </div>
+<% end %>

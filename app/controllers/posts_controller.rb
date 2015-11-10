@@ -6,6 +6,8 @@ class PostsController < ApplicationController
   end
   
   def show
+    @user_email = User.find_by(id: current_user.id).email
+    p "------------------------"
     @post = Post.find(params[:id])
   end
     

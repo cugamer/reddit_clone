@@ -10,7 +10,9 @@ class CommentController < ApplicationController
     else
       flash[:danger] = "Comment not posted"
     end
-    redirect_to post_path(3)
+    @user_name = user.email
+    p "------------------#{@user_name}------------------------"
+    redirect_to post_path(comment_params[:post_id])
   end
   
   private
