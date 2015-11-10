@@ -7,4 +7,6 @@
       <img src='/assets/arrow_down.png' />
       <%= link_to post.descriptive_text, "http://" + post.link, :target => "_blank" %> -- 
       <%= post.created_at.strftime("%b %-d %Y, %l:%M %P (%Z)") %></p>
+  <p><%= link_to post.comments.count.to_s + " comments", post_path(post.id) %></p>
 <% end %>
+
