@@ -20,6 +20,6 @@ class UsersController < ApplicationController
   
   private
     def user_params
-      params.require(:comments).permit(:comment_body)
+      params.require(:comments).permit(:name, :email, :password, :password_confirmation)
     end
 end
