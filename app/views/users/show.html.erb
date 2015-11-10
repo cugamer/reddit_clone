@@ -8,5 +8,7 @@
 <% @user.posts.reverse_each do |post| %>
   <p>
     <%= link_to post.descriptive_text,"http://" + post.link, :target => "_blank" %>
+    <br />
+    <p><%= link_to "#{post.comments.count} comments", post_path(post.id) %></p>
   </p>
 <% end %>
