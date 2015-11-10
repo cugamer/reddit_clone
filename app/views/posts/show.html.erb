@@ -1,5 +1,7 @@
 <!-- View for the individual posts page -->
 
+<% provide(:title, "Post") %>
+
 <h3><%= link_to @post.descriptive_text, "http://" + @post.link %></h3>
 
 <%= form_for :comments, url: comment_create_path do |f| %>
